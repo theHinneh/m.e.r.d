@@ -1,0 +1,14 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+.npm
+
+# dotenv environment variables file
+.env
+.env.test
+.env*.local
+
+# Temporary folders
+tmp/
+temp/

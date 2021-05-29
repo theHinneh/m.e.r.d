@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  node-app:
+    build:
+      context: .
+      args:
+        NODE_ENV: development
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+      - MONGO_USER=theHinneh
+      - MONGO_PASSWORD=theHinneh
+      - SESSION_SECRET=theSecretWeDon'twantoShare
+    command: npm run dev
+  mongo:
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=theHinneh
+      - MONGO_INITDB_ROOT_PASSWORD=theHinneh
+
+  # redis:
+  #   environment: 
+  #     - 
