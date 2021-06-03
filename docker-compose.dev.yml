@@ -1,6 +1,10 @@
 version: "3"
 
 services:
+  nginx:
+    ports:
+      - "4200:80"
+
   node-app:
     build:
       context: .
@@ -21,5 +25,5 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=theHinneh
 
   # redis:
-  #   environment: 
-  #     - 
+  #   environment:
+  #     -
