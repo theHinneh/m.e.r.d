@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const redis = require("redis");
 let RedisStore = require("connect-redis")(session);
+const cors = require("cors");
 
 const {
   MONGO_USER,
@@ -34,6 +35,7 @@ mongoose
   .catch((e) => console.log(e));
 
 app.enable("trust proxy");
+app.use(cors({}));
 
 app.use(
   session({
