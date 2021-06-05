@@ -11,7 +11,9 @@
     "stop": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml down",
     "up": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d -V",
     "loadbalance:dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --scale node-app=2",
-    "loadbalance:prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --scale node-app=2"
+    "loadbalance:prod": "docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --scale node-app=2",
+
+    "deploy": "docker stack deploy -c docker-compose.yml -c docker-compose.prod.yml merdApp"
   },
   "keywords": [
     "Mongo",
