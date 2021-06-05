@@ -11,7 +11,7 @@ services:
       restart_policy:
         condition: any
       update_config:
-        paralleism: 2
+        parallelism: 2
         delay: 15s
     build:
       context: .
